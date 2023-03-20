@@ -1,10 +1,11 @@
 {
   "name": "burgerwalabhai",
   "version": "1.0.0",
-  "description": "this is burgerwala backend...",
+  "description": "this is burgerwala backend",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "keywords": [
     "backend",
@@ -23,5 +24,8 @@
     "mongoose": "^7.0.2",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
   }
 }
