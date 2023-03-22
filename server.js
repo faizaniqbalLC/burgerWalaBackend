@@ -8,5 +8,5 @@ app.get("/", (req, res, next) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.log("server run");
+  console.log("server run.");
 });
