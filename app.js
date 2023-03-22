@@ -12,4 +12,4 @@ dotenv.config({
 });
 connectPassport();
 
-app.use("/app/v1/", userRouter);
+app.use("/api/v1", userRouter);
