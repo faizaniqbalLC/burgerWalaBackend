@@ -3,5 +3,5 @@ import { placeOrder } from "../controllers/order.js";
 import { isAuthenticated } from "../middleware/auth.js";
 const router = express.Router();
 
-router.post("/createorder", isAuthenticated, placeOrder);
+router.post("/createorder", placeOrder);
 export default router;
