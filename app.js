@@ -1,11 +1,13 @@
 import express, { urlencoded } from "express";
 import dotenv from "dotenv";
-import userRouter from "./routes/user.js";
-import { connectPassport } from "./utils/Provider.js";
 import session from "express-session";
-import passport from "passport";
 import cookieParser from "cookie-parser";
+import passport from "passport";
+
+import { connectPassport } from "./utils/Provider.js";
 import { errorMiddleware } from "./middleware/errorMiddleware.js";
+import userRouter from "./routes/user.js";
+import orderRouter from "./routes/order.js";
 
 const app = express();
 
@@ -35,4 +37,5 @@ app.use(passport.session());
 connectPassport();
 
 app.use("/api/v1", userRouter);
+app.use("/api/v1", orderRouter);
 app.use(errorMiddleware);
