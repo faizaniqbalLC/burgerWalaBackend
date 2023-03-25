@@ -54,7 +54,7 @@ const schema = new mongoose.Schema({
   },
 
   paymentInfo: {
-    type: mongoose.SchemaType.ObjectId,
+    type: mongoose.Schema.ObjectId,
     ref: "Payment",
   },
   paidAt: Date,
@@ -83,7 +83,7 @@ const schema = new mongoose.Schema({
   deliveredAt: Date,
   createdAt: {
     type: Date,
-    deefault: Date.now,
+    default: Date.now,
   },
 });
 
