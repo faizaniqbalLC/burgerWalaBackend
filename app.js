@@ -36,7 +36,7 @@ app.use(passport.session());
 
 connectPassport();
 
-// routes
+// routes 1
 app.use("/api/v1", userRouter);
 app.use("/api/v1", orderRouter);
 app.use(errorMiddleware);
