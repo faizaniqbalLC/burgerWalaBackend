@@ -1,12 +1,32 @@
 import mongoose from "mongoose";
+
 const schema = new mongoose.Schema({
   shippingInfo: {
-    hNo: { type: String, required: true },
-    city: { type: String, required: true },
-    state: { type: String, required: true },
-    country: { type: String, required: true },
-    pinCode: { type: Number, required: true },
-    phoneNo: { type: Number, required: true },
+    hNo: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
+
+    country: {
+      type: String,
+      required: true,
+    },
+    pinCode: {
+      type: Number,
+      required: true,
+    },
+    phoneNo: {
+      type: Number,
+      required: true,
+    },
   },
 
   orderItems: {
@@ -20,6 +40,7 @@ const schema = new mongoose.Schema({
         required: true,
       },
     },
+
     vegCheeseBurger: {
       price: {
         type: Number,
@@ -30,6 +51,7 @@ const schema = new mongoose.Schema({
         required: true,
       },
     },
+
     burgerWithFries: {
       price: {
         type: Number,
@@ -44,13 +66,14 @@ const schema = new mongoose.Schema({
 
   user: {
     type: mongoose.Schema.ObjectId,
-    ref: "user",
+    ref: "User",
     required: true,
   },
+
   paymentMethod: {
-    type: String,
+    type: "String",
     enum: ["COD", "Online"],
-    deafult: "COD",
+    default: "COD",
   },
 
   paymentInfo: {
@@ -58,6 +81,7 @@ const schema = new mongoose.Schema({
     ref: "Payment",
   },
   paidAt: Date,
+
   itemsPrice: {
     type: Number,
     default: 0,
@@ -80,6 +104,7 @@ const schema = new mongoose.Schema({
     enum: ["Preparing", "Shipped", "Delivered"],
     default: "Preparing",
   },
+
   deliveredAt: Date,
   createdAt: {
     type: Date,
@@ -87,4 +112,4 @@ const schema = new mongoose.Schema({
   },
 });
 
-export const Order = mongoose.model("Order", schema);
+export const Order = mongoose.model("Orders", schema);
