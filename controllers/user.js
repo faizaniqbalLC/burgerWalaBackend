@@ -1,3 +1,6 @@
+import { asyncError } from "../middleware/errorMiddleware.js";
+import { Users } from "../models/Users.js";
+
 export const myProfile = (req, res, next) => {
   res.status(200).json({
     success: true,
@@ -13,3 +16,8 @@ export const logout = (req, res, next) => {
     });
   });
 };
+
+export const getAdminUsers = asyncError(async (req, res, next) => {
+  const users = await Users.find({});
+  res.status(200).json({ success: true, users });
+});
