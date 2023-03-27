@@ -7,3 +7,10 @@ export const isAuthenticated = (req, res, next) => {
   }
   next();
 };
+export const authorizeAdmin = (req, res, next) => {
+  const token = req.cookies["connect.sid"];
+  if (req.user.role !== "admin") {
+    return next(new ErrorHandler("Only Admin Allowed", 401));
+  }
+  next();
+};
