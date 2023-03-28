@@ -12,7 +12,10 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  createdAt: Date.now,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 export const Payment = mongoose.model("Payment", schema);
