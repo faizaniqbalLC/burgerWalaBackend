@@ -23,7 +23,8 @@
     "express-session": "^1.17.3",
     "mongoose": "^7.0.2",
     "passport": "^0.6.0",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "razorpay": "^2.8.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
