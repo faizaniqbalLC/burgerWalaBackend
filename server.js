@@ -13,6 +13,6 @@ app.get("/", (req, res, next) => {
   res.send("<h1>working fine</h1>");
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("server run.", process.env.NODE_ENV);
 });
