@@ -4,8 +4,11 @@
   "description": "this is burgerwala backend",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "start": "SET NODE_ENV=production & nodemon server.js",
+    "start": "SET NODE_ENV=production & node server.js",
     "dev": "SET NODE_ENV=development & nodemon server.js"
   },
   "keywords": [
