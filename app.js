@@ -13,7 +13,7 @@ dotenv.config({
   path: "./config/config.env",
 });
 
-dotenv.config();
+// dotenv.config();
 
 // Using Middlewares
 app.use((req, res, next) => {
