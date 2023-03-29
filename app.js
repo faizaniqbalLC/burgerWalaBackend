@@ -14,15 +14,15 @@ dotenv.config({
 });
 
 // Using Middlewares
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+//   );
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+//   next();
+// });
 
 app.use(
   session({
@@ -37,17 +37,18 @@ app.use(
   })
 );
 app.use(cookieParser());
+app.use(express.json());
 
 app.use(
   urlencoded({
     extended: true,
   })
 );
-app.use(express.json());
+
 app.use(
   cors({
+    origin: "http://localhost:5173",
     credentials: true,
-    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
