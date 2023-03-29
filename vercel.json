@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "workserver",
   "builds": [
     {
       "src": "server.js",
@@ -9,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/server.js"
     }
   ]
 }
