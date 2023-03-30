@@ -18,7 +18,7 @@ router.get(
 router.get(
   "/login",
   passport.authenticate("google", {
-    successRedirect: "https://burger-wala-frontend-six.netlify.app/me",
+    successRedirect: "https://burger-wala-frontend-six.netlify.app",
   })
 );
 
