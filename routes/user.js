@@ -17,7 +17,9 @@ router.get(
 );
 router.get(
   "/login",
-  passport.authenticate("google", { successRedirect: "http://localhost:5173" })
+  passport.authenticate("google", {
+    successRedirect: "https://burger-wala-frontend-six.netlify.app/me",
+  })
 );
 
 router.get("/me", isAuthenticated, myProfile);
