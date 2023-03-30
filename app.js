@@ -13,7 +13,7 @@ dotenv.config({
   path: "./config/config.env",
 });
 
-// Using Middlewares
+// Using Middleware
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*");
 //   res.setHeader(
