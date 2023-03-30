@@ -7,8 +7,8 @@ export const myProfile = (req, res, next) => {
     user: req.user,
   });
 };
-export const logout = (req, res, next) => {
-  req.session.destroy((err) => {
+export const logout = async (req, res, next) => {
+  await req.session.destroy((err) => {
     if (err) return next(err);
     res.clearCookie("connect.sid", {
       secure: process.env.NODE_ENV == "development" ? false : true,
