@@ -1,4 +1,4 @@
-# burgerWalaFrontend
+# burgerWalaBackend
 
 This is cs burger wala app just create by me and still working on its backend side.
 I'm facing some deployment issues on vercel If anyone want to contribute feel free to do this.
